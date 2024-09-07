@@ -56,7 +56,7 @@ main > p {
 .profile-section {
    margin-left: 2.8rem;
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
    place-items: center;
 }
 .profile-0 {
@@ -67,6 +67,7 @@ main > p {
    border-radius: 50%;
    height: 150px;
    width: 150px;
+   object-fit: cover;
 }
 .profile-0 > h2 {
    background: var(--text-gradient);
