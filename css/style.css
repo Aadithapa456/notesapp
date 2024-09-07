@@ -154,7 +154,7 @@ main {
    background: var(--text-gradient);
    background-clip: text;
    -webkit-text-fill-color: transparent;
-   font-size: 5rem;
+   font-size: 4.5rem;
    text-align: center;
    font-weight: 650;
 }
