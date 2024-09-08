@@ -39,10 +39,37 @@ function loadTheme() {
    }
 }
 document.addEventListener("DOMContentLoaded", loadTheme); // Runs the loadTheme() function everytime the page loads
+// function navBar() {
+//    let nav = document.querySelector(".nav-items");
+//    nav.style.display = "none"
+//    let isVisible = nav.classList.contains("nav-visible");
+//    console.log(isVisible);
+//    if (isVisible) {
+//       nav.classList.remove("nav-visible");
+//       nav.classList.add("nav-hide");
+//    } else {
+//       nav.classList.add("nav-visible");
+//       nav.classList.remove("nav-hide");
+//    }
+// }
 function navBar() {
    let nav = document.querySelector(".nav-items");
    let isVisible = nav.classList.contains("nav-visible");
-   console.log(isVisible);
-   // Toggle class based on visibility
-   nav.classList.toggle("nav-visible");
+
+   if (isVisible) {
+      // Hide the nav
+      nav.classList.remove("nav-visible");
+      nav.classList.add("nav-hide");
+      // Wait for the animation to complete before setting display to none
+      setTimeout(() => {
+         nav.style.display = "none";
+      }, 400); // Timeout should match the animation duration
+   } else {
+      // Set display to block (or flex) before showing
+      nav.style.display = "block";
+      setTimeout(() => {
+         nav.classList.add("nav-visible");
+         nav.classList.remove("nav-hide");
+      }, 10); // Small delay to allow the display to be applied before animation
+   }
 }
