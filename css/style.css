@@ -77,6 +77,24 @@ nav.dark {
 .nav-items > ul > li > a {
    text-decoration: none;
    color: var(--text-color);
+   transition: all ease-in-out .3s;
+   position: relative;
+
+   &::after{
+      content: "";
+      position: absolute;
+      bottom: -.15rem;
+      left: 0;
+      width: 0;
+      border-bottom: .3rem solid #6c63ff;
+      transition: all linear .3s;
+  }
+}
+.nav-items>ul>li>a:hover::after{
+   width: 100%;
+}
+.nav-items>ul>li>a:hover{
+   color: red;
 }
 .nav-items {
    /* position: relative; */

@@ -68,8 +68,13 @@ main > p {
    height: 150px;
    width: 150px;
    object-fit: cover;
+   transition: all ease-in-out .3s;
+}
+.profile-0>img:hover{
+   transform: scale(1.15);
 }
 .profile-0 > h2 {
+   margin-top: .7rem;
    background: var(--text-gradient);
    background-clip: text;
    -webkit-text-fill-color: transparent;
